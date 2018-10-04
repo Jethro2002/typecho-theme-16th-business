@@ -491,10 +491,17 @@ img.alignright {
     body {
         font-size: 81.25%;
     }
+
+    #nav-menu {
+        margin: 5px 0 0;
+        padding: 0;
+    }
+
     #nav-menu a {
         float: none;
         display: inline-block;
         margin: 0 8px;
+        margin-top: 15px;
     }
     .post-content {
         font-size: 15px;

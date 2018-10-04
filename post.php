@@ -22,6 +22,18 @@
         <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
     </ul>
 </div><!-- end #main-->
+<?php
+if(isset($this->fields->image_center) == "1"){
+    _e("
+        <style>
+        .post-content img {
+        margin:0 auto;
+        display: block;
+        }
+        </style>
+    ");
+}
+?>
 
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>

@@ -4,7 +4,7 @@
  * 
  * @package 16th-商务版
  * @author Jieck Loo
- * @version beta 1.0
+ * @version beta 1.1
  * @link https://jieck.cn
  */
 
