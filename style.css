@@ -241,6 +241,7 @@ textarea {
     margin-bottom: 5px;
     height: 200px;
     overflow-y: hidden;
+    background: no-repeat #FFF;
     background-size: 100%;
     background-position: center;
     transition: background-size 0.3s;

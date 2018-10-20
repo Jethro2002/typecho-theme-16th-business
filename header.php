@@ -43,7 +43,9 @@
                 </div>
                 <div id="logo-title">
                     <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-        	        <p class="description"><?php $this->options->description() ?></p>
+        	        <p class="description">
+                    <?php $description = explode("|",$this->options->description);_e($description[rand(0,count($description)-1)]); ?>
+                    <?php /*$this->options->description()*/ ?></p>
                 </div>
                 
                 <script>
@@ -51,7 +53,9 @@
                 </script>
             <?php else: ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-        	    <p class="description"><?php $this->options->description() ?></p>
+        	    <p class="description">
+                <?php $description = explode("|",$this->options->description);_e($description[rand(0,count($description)-1)]); ?>
+                <?php /*$this->options->description()*/ ?></p>
             <?php endif; ?>
             </div>
             <div class="site-search col-3 kit-hidden-tb">
