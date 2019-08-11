@@ -2,7 +2,8 @@
 <?php $this->need('header.php'); ?>
 
 <div class="col-mb-12 col-8" id="main" role="main">
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" style="position: relative;">
+        <a id="expand_close" onclick="expand();" style="display: none;position: absolute;right: 10px;top: 6px;color: #8a8a8a;text-decoration: underline;cursor: pointer;">显示侧边栏</a>
         <h1 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
         <ul class="post-meta">
             <li itemprop="author" itemscope itemtype="http://schema.org/Person"><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
@@ -22,18 +23,7 @@
         <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
     </ul>
 </div><!-- end #main-->
-<?php
-if(isset($this->fields->image_center) == "1"){
-    _e("
-        <style>
-        .post-content img {
-        margin:0 auto;
-        display: block;
-        }
-        </style>
-    ");
-}
-?>
 
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>
+

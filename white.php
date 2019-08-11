@@ -2,7 +2,7 @@
 
 /**
 
- * 简约书信（不支持评论）
+ * 空白模板
 
  *
 
@@ -25,9 +25,9 @@
             'search'    =>  _t('包含关键字 %s 的文章'),
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
-        ), '', ' - '); ?><?php $this->options->title(); ?></title>
+        ), '', ' - '); ?>Jieck Loo</title>
 
-    <div id="css_output">
+<div id="css_output">
         <?php if($this->fields->image_center==1): ?>
             <style>
                 .post-content img {display: block;margin: 0 auto;}
@@ -35,7 +35,7 @@
         <?php endif; ?>
     </div>
 
-        <script>
+    <script>
     window.onload=function(){
         <?php if($this->is('index')): ?>
         <?php else: ?>
@@ -70,11 +70,11 @@
         }
 
         .post {
-            width: 800px;
+            width: 1200px;
             margin: 0 auto;
             background: #FFF;
             padding: 20px;
-            border: 3px solid;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.18);
         }
 
         .post-title {
@@ -107,13 +107,12 @@
             color: #444;
         }
 
-        @media(max-width:767px) {
+        @media(max-width:1270px) {
             .post {
-                width: 100%;
+                width: calc(100% - 10px);
                 margin: 0 auto;
                 background: #FFF;
                 padding: 20px;
-                border: 3px solid;
                 box-sizing: border-box;
             }
 
@@ -123,4 +122,14 @@
         }
     </style>
 
-    <?php $this->need('footer.php'); ?>
+        </div><!-- end .row -->
+    </div>
+</div><!-- end #body -->
+
+<footer id="footer" role="contentinfo">
+    &copy; <?php echo date('Y'); ?> Jieck Loo.
+</footer><!-- end #footer -->
+
+<?php $this->footer(); ?>
+</body>
+</html>
